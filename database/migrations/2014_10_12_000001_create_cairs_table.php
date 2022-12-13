@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCucisTable extends Migration
+return new class extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,10 @@ class CreateCucisTable extends Migration
      */
     public function up()
     {
-        Schema::create('cucis', function (Blueprint $table) {
+        Schema::create('cairs', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users');
-            $table->string('nama');
-            $table->string('nomor_hp');
-            $table->string('jenis');
+            $table->unsignedBigInteger('tabungan_id');
+            $table->foreign('tabungan_id')->references('id')->on('tabungans');
             $table->timestamps();
         });
     }
@@ -31,6 +28,6 @@ class CreateCucisTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cucis');
+        Schema::dropIfExists('cairs');
     }
-}
+};

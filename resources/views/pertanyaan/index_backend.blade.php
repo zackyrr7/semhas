@@ -14,18 +14,41 @@
                 <!-- Card Body -->
             
                 
-                <ul>
-                    @foreach ($pertanyaan as $prt)
-                        <li>
-                        {{ $prt->judul }}
-                        <a href="{{route('admin.pertanyaan.detail',['id'=>$prt->id])}}">Detail</a>
-                        <a href="{{route('admin.pertanyaan.formubah',['id'=>$prt->id])}}">Ubah</a>
-                        <a href="{{route('admin.pertanyaan.hapus',['id'=>$prt->id])}}">Hapus</a>
-                        </li>
-                    @endforeach
-                </ul>
+            
                 <a href="{{route('admin.pertanyaan.formtambah')}}" class="btn btn-primary">Tambah Pertanyaan</a>
                 
+                <ul>
+                    <div class="table-responsive">
+                        <table class="table table-striped table-sm">
+                          <thead>
+                            <tr>
+                              <th scope="col">ID Pertanyaan</th>
+                              <th scope="col">Judul</th>
+                              
+                              <th scope="col">Detail</th>
+                              <th scope="col">Ubah</th>
+                              <th scope="col">Hapus</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            @foreach ($pertanyaan as $prt)
+                            <li>
+                                <tr>
+                                    <td>{{$prt->id}}</td>
+                                    <td>{{$prt->judul}}</td>
+                                    
+                                    <td><a href="{{route('admin.pertanyaan.detail',['id'=>$prt->id])}}">Detail</a></td>
+                                    <td> <a href="{{route('admin.pertanyaan.formubah',['id'=>$prt->id])}}">Ubah</a></td>
+                                    <td><a href="{{route('admin.pertanyaan.hapus',['id'=>$prt->id])}}">Hapus</a>
+                                    </td>
+                                  </tr>
+                            </li>
+                            @endforeach
+                          </tbody>
+                        </table>
+                      </div>
+               
+            </ul>
             </div>
         </div>
     </div>

@@ -13,6 +13,7 @@
                    
                     <!-- Card Body -->
                     <div class="card-body">
+                    Id User : {{ $wallet->user_id }} <br/>
                     Nama : {{ $wallet->nama }} <br/>
                     Jenis E-Wallet: {{ $wallet->jenis }}<br/>
                     Nomor Hp: {{ $wallet->nomor_hp }}<br/>

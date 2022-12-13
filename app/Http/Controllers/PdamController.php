@@ -20,7 +20,8 @@ class PdamController extends Controller
             Pdam::create([
                 'nama' =>$request->nama,
                 'nomor_hp'=> $request->nomor_hp,
-                'air' => $request->air
+                'air' => $request->air,
+                'user_id' => $request->user_id
                 
             ]);
            

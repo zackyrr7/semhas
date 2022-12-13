@@ -23,6 +23,7 @@ class GoldController extends Controller
                 'nama' =>$request->nama,
                 'emas'=> $request->emas,
                 'nomor_hp' => $request->nomor_hp,
+                'user_id' => $request->user_id
                 
             ]);
              

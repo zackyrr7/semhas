@@ -22,7 +22,8 @@ class WalletController extends Controller
                 'nomor_hp'=> $request->nomor_hp,
                 'jenis' => $request->jenis,
                 'total' => $request->total,
-                'no_wallet' => $request->no_wallet
+                'no_wallet' => $request->no_wallet,
+                'user_id' => $request->user_id
                 
             ]);
          

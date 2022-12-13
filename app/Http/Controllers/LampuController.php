@@ -20,7 +20,8 @@ class LampuController extends Controller
             Lampu::create([
                 'nama' =>$request->nama,
                 'nomor_hp'=> $request->nomor_hp,
-                'PLN' => $request->PLN
+                'PLN' => $request->PLN,
+                'user_id' => $request->user_id
                 
             ]);
             

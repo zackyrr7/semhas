@@ -8,7 +8,7 @@
             </div>
         @endif
         <!-- Page Heading -->
-        <h1 class="h3 mb-4 text-gray-800">detail User</h1>
+        <h1 class="h3 mb-4 text-gray-800">detail Tabungan</h1>
         <div class="row">
             <div class="col-lg-12">
                 <!-- Dropdown Card Example -->
@@ -25,9 +25,9 @@
                         <a class="btn btn-danger col-3"
                             href="{{ route('admin.tabungan.hapus', ['id' => $tabungan->id]) }}">Hapus</a>
                     @endforeach
-                    <h6 class="ml-4 text-success">Total Tabungan = {{ $totalTabungan }}</h6>
+                    
                 </div>
-                <button type="button" class="btn btn-success float-right mb-4" onclick="show()">Show Form</button>
+                <button type="button" class="btn btn-success float-right mb-4" onclick="show()">Edit Tabungan</button>
                 <form id="form-tambah" class=" d-none" action="{{ route('admin.tabungan.store') }}" method="POST"
                     style="width: 50%">
                     @csrf

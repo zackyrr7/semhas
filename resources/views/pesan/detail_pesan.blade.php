@@ -13,11 +13,12 @@
                    
                     <!-- Card Body -->
                     <div class="card-body">
+                    Nama pemesan: {{ $pesan->user_id }} <br/>
                     Nama pemesan: {{ $pesan->nama }} <br/>
                     Jenis Barang: {{ $pesan->barang }}<br/>
-                    Alamat: {{ $pesan->alamat }}<br/>
+                    Alamat: {{ $pesan->tanggal }}<br/>
                     Nomor Hp: {{ $pesan->nomor_hp }}<br/>
-                    Tanggal: {{ $pesan->tanggal }}<br/>
+                    Tanggal: {{ $pesan->alamat }}<br/>
                     </div>
     
                     

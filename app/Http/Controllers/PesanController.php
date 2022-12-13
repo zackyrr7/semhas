@@ -23,7 +23,7 @@ class PesanController extends Controller
             Pesan::create([
                 'nama' =>$request->nama,
                 'barang'=> $request->barang,
-                 //'foto' => $imageName,
+                'user_id' => $request->user_id,
                  'nomor_hp' => $request->nomor_hp,
                  'alamat'=> $request->alamat,
                  'tanggal' => $request->tanggal

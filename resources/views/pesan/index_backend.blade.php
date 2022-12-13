@@ -15,7 +15,7 @@
                 <!-- Card Body -->
             
                 
-                <ul>
+                {{-- <ul>
                     @foreach ($pesan as $psn)
                         <li>
                         {{ $psn->nama }}
@@ -23,7 +23,35 @@
                         <a href="{{route('admin.pesan.hapus',['id'=>$psn->id])}}">Hapus</a>
                         </li>
                     @endforeach
-                </ul>
+                </ul> --}}
+                <ul>
+                    <div class="table-responsive">
+                        <table class="table table-striped table-sm">
+                          <thead>
+                            <tr>
+                              <th scope="col">ID User</th>
+                              <th scope="col">Nama</th>
+                              <th scope="col">Detail</th>
+                              <th scope="col">Hapus</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            @foreach ($pesan as $psn)
+                            <li>
+                                <tr>
+                                    <td>{{$psn->user_id}}</td>
+                                    <td>{{$psn->nama}}</td>
+                                    <td><a href="{{route('admin.pesan.detail',['id'=>$psn->id])}}">Detail</a></td>
+                                    <td><a href="{{route('admin.pesan.hapus',['id'=>$psn->id])}}">Hapus</a>
+                                    </td>
+                                  </tr>
+                            </li>
+                            @endforeach
+                          </tbody>
+                        </table>
+                      </div>
+               
+            </ul>
                 
             </div>
         </div>

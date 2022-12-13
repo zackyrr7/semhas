@@ -15,9 +15,10 @@ class CreatePesansTable extends Migration
     {
         Schema::create('Pesans', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->string('nama');
             $table->string('barang');
-           
             $table->String('nomor_hp');
             $table->string('alamat');
             $table->string('tanggal');

@@ -66,6 +66,8 @@ class AuthController extends Controller
                 'token' => $token,
                 'type' => 'bearer',
                 'id' => auth()->guard('api')->user()->id,
+                'nama' => auth()->guard('api')->user()->name,
+                'hp' => auth()->guard('api')->user()->email,
 
             ]
         );

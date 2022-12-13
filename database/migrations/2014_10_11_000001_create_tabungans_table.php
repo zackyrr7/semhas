@@ -18,7 +18,7 @@ class CreateTabungansTable extends Migration
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
             $table->string('tanggal', 255);
-            $table->decimal('total');
+            $table->decimal('total',9,3);
             $table->timestamps();
         });
     }

@@ -13,8 +13,8 @@
                    
                     <!-- Card Body -->
                     <div class="card-body">
+                    ID User : {{ $lampu->id }} <br/>
                     Nama : {{ $lampu->nama }} <br/>
-                    
                     Nomor Hp: {{ $lampu->nomor_hp }}<br/>
                     Nomor PLN: {{ $lampu->PLN }}<br/>
                    

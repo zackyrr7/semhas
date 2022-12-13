@@ -13,6 +13,7 @@
                    
                     <!-- Card Body -->
                     <div class="card-body">
+                    Id: {{ $user->id ?? 'None' }} <br/>
                     Nama: {{ $user->name ?? 'None' }} <br/>
                     Nomor Hp: {{ $user->email ?? 'None' }}<br/>
                     </div>

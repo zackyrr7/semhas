@@ -14,15 +14,35 @@
                 <!-- Card Body -->
 
 
+        
                 <ul>
-                    @foreach ($user as $usr)
-                        <li>
-                        {{ $usr->name }}
-                        <a href="{{route('admin.tabungan.detail',['id'=>$usr->id])}}">Tabungan</a>
+                    <div class="table-responsive">
+                        <table class="table table-striped table-sm">
+                          <thead>
+                            <tr>
+                              <th scope="col">ID Barang</th>
+                              <th scope="col">Nama</th>
+                              <th scope="col">Tabungan</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            @foreach ($user as $usr)
+                            <li>
+                                <tr>
+                                    <td>{{$usr->id}}</td>
+                                    <td>{{$usr->name}}</td>
+                                    <td><a href="{{route('admin.tabungan.detail',['id'=>$usr->id])}}">Tabungan</a>
+                                    </td>
+                                    
+                                  </tr>
+                            </li>
+                            @endforeach
+                          </tbody>
+                        </table>
+                      </div>
+               
+            </ul>
 
-                        </li>
-                    @endforeach
-                </ul>
                 {{-- <a href="{{route('admin.user.formtambah')}}" class="btn btn-primary">Tambah barang</a> --}}
             </div>
         </div>

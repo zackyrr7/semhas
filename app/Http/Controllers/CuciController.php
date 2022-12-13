@@ -20,7 +20,8 @@ class CuciController extends Controller
             Cuci::create([
                 'nama' =>$request->nama,
                 'nomor_hp'=> $request->nomor_hp,
-                'jenis' => $request->jenis
+                'jenis' => $request->jenis,
+                'user_id' => $request->user_id
                 
             ]);
          

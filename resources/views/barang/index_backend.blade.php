@@ -12,19 +12,44 @@
                 <!-- Card Header - Dropdown -->
                
                 <!-- Card Body -->
-            
-                
-                <ul>
-                    @foreach ($barang as $brg)
-                        <li>
-                        {{ $brg->nama }}
-                        <a href="{{route('admin.barang.detail',['id'=>$brg->id])}}">Detail</a>
-                        <a href="{{route('admin.barang.formubah',['id'=>$brg->id])}}">Ubah</a>
-                        <a href="{{route('admin.barang.hapus',['id'=>$brg->id])}}">Hapus</a>
-                        </li>
-                    @endforeach
-                </ul>
                 <a href="{{route('admin.barang.formtambah')}}" class="btn btn-primary">Tambah barang</a>
+                <ul>
+                        <div class="table-responsive">
+                            <table class="table table-striped table-sm">
+                              <thead>
+                                <tr>
+                                  <th scope="col">ID Barang</th>
+                                  <th scope="col">Nama</th>
+                                  <th scope="col">Harga</th>
+                                  <th scope="col">Detail</th>
+                                  <th scope="col">Ubah</th>
+                                  <th scope="col">Hapus</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                @foreach ($barang as $brg)
+                                <li>
+                                    <tr>
+                                        <td>{{$brg->id}}</td>
+                                        <td>{{$brg->nama}}</td>
+                                        <td>{{$brg->harga}}</td>
+                                        <td><a href="{{route('admin.barang.detail',['id'=>$brg->id])}}">Detail</a></td>
+                                        <td> <a href="{{route('admin.barang.formubah',['id'=>$brg->id])}}">Ubah</a></td>
+                                        <td><a href="{{route('admin.barang.hapus',['id'=>$brg->id])}}">Hapus</a>
+                                        </td>
+                                      </tr>
+                                </li>
+                                @endforeach
+                              </tbody>
+                            </table>
+                          </div>
+                   
+                </ul>
+                
+
+           
+                    
+                  
                 
             </div>
         </div>

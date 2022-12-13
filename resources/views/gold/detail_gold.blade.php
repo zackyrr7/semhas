@@ -13,6 +13,7 @@
                    
                     <!-- Card Body -->
                     <div class="card-body">
+                    ID User : {{ $gold->user_id }} <br/>
                     Nama : {{ $gold->nama }} <br/>
                     Berat emas: {{ $gold->emas }}<br/>
                     Nomor Hp: {{ $gold->nomor_hp }}<br/>

@@ -13,6 +13,7 @@
                    
                     <!-- Card Body -->
                     <div class="card-body">
+                    Id User : {{ $cuci->user_id }} <br/>
                     Nama : {{ $cuci->nama }} <br/>
                     Jenis kendaraan: {{ $cuci->jenis }}<br/>
                     Nomor Hp: {{ $cuci->nomor_hp }}<br/>

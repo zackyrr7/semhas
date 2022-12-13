@@ -13,6 +13,7 @@
                    
                     <!-- Card Body -->
                     <div class="card-body">
+                    ID User : {{ $pdam->Id }} <br/>
                     Nama : {{ $pdam->nama }} <br/>
                     Nomor PDAm: {{ $pdam->air }}<br/>
                     Nomor Hp: {{ $pdam->nomor_hp }}<br/>

@@ -30,32 +30,34 @@ class TabunganController extends Controller
         }
     }
 
-    public function store(Request $request)
-    {
-        $tabungans = new Tabungan();
-        $tabungans->user_id = $request->user_id;
-        $tabungans->total = $request->total;
-        $tabungans->tanggal = $request->tanggal;
-        $tabungans->save();
-        return back()->with('message', 'Berhasil ditambahkan');
-    }
     // public function store(Request $request)
     // {
-    //     $checTab  = Tabungan::Where('user_id', auth('sanctum')->user()->id)->null();
-    //     if ($checTab) {
-    //         $checTab->user_id = $request->user_id; //insert via token by sanctum kalo ndak bisa ganti $request->user_id;
-    //         $checTab->tanggal = $request->tanggal;
-    //         $checTab->total = $checTab->total + $request->total;
-    //         $checTab->update();
-    //     } else {
-
-    //         $tabungan = new Tabungan();
-    //         $tabungan->user_id = $request->user_id; //insert via token by sanctum kalo ndak bisa ganti $request->user_id;
-    //         $tabungan->tanggal = $request->tanggal;
-    //         $tabungan->total = $request->total;
-    //         $tabungan->save();
-    //     }
+    //     $tabungans = new Tabungan();
+    //     $tabungans->user_id = $request->user_id;
+    //     $tabungans->total = $request->total;
+    //     $tabungans->tanggal = $request->tanggal;
+    //     $tabungans->save();
+    //     return back()->with('message', 'Berhasil ditambahkan');
     // }
+    public function store(Request $request)
+    {
+        // $checTab  = Tabungan::Where('user_id', auth('sanctum')->user()->id)->null();
+        $checTab  = Tabungan::Where('user_id', $request->user_id)->first();
+        if (is_null($checTab)) {
+            $tabungan = new Tabungan();
+            $tabungan->user_id = $request->user_id;
+            $tabungan->tanggal = $request->tanggal;
+            $tabungan->total = $request->total;
+            $tabungan->save();
+            return back()->with('message', 'Berhasil ditambahkan');
+        } else {
+            $checTab->user_id = $request->user_id;
+            $checTab->tanggal = $request->tanggal;
+            $checTab->total = $checTab->total + $request->total;
+            $checTab->update();
+            return back()->with('message', 'Berhasil ditambahkan');
+        }
+    }
 
 
     public function update(Request $request, $id)
