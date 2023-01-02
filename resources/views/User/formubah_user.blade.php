@@ -14,15 +14,15 @@
     <form action= "{{ route('admin.user.ubah',['id'=>$user->id]) }}" method="post">
     @csrf
     <div class= "from-group">
-        <label for="name">nama user</label>
+        <label for="name">nama konsumen</label>
         <input class="form-control" type="text" name="name" value="{{ $user->name }}">
     
     </div>
     <div class="form-group">
-        <label for="email">email user</label>
-        <textarea class="form-control" name="email" id="" cols="30" rows="10">
-            {{$user->email}}
-        </textarea>
+        <label for="email">Nomor Hp konsumen</label>
+        <input class="form-control" name="email" id="" cols="30" rows="10" value="{{ $user->email }}">
+           
+       
     </div>
     <input class="btn btn-primary"type="submit" value="Simpan">
 </form>

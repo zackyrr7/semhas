@@ -15,7 +15,7 @@
     <li class="nav-item active">
         <a class="nav-link active" href={{route('admin.dashboard')}}>
             <i class="fas fa-user-ninja"></i>
-            <span>Kelola Data User</span></a>
+            <span>Kelola Data Konsumen</span></a>
     </li>
     <li class="nav-item active">
         <a class="nav-link active" href={{route('admin.tabungan')}}>

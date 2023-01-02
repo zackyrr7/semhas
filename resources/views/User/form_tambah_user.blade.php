@@ -14,7 +14,7 @@
     <form action= "{{ route('admin.user.tambah') }}" method="post" enctype="multipart/form-data">
     @csrf
     <div class= "from-group">
-        <label for="name">Nama user</label>
+        <label for="name">Nama Konsumen</label>
         <input class="form-control" type="text" name="name">
     
     </div>

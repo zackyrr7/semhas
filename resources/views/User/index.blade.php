@@ -4,7 +4,7 @@
 <div class="container-fluid">
 
     <!-- Page Heading -->
-    <h1 class="h3 mb-4 text-gray-800">List User</h1>
+    <h1 class="h3 mb-4 text-gray-800">List Konsumen</h1>
     <div class="row">
         <div class="col-lg-12">
             <!-- Dropdown Card Example -->
@@ -14,7 +14,7 @@
                 <!-- Card Body -->
             
                 
-                <a href="{{route('admin.user.formtambah')}}" class="btn btn-primary">Tambah user</a>
+                <a href="{{route('admin.user.formtambah')}}" class="btn btn-primary">Tambah Konsumen</a>
                 <ul>
                     <div class="table-responsive">
                         <table class="table table-striped table-sm">

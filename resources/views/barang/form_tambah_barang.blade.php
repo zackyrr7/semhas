@@ -20,7 +20,7 @@
     </div>
     <div class="form-group">
         <label for="jawaban">Jawaban Harga barang</label>
-        <textarea class="form-control" name="harga" id="" cols="30" rows="10"></textarea>
+        <input class="form-control" name="harga" id="" cols="30" rows="10">
     </div>
     <div class="form-group">
         <label for="foto">Gambar</label>
