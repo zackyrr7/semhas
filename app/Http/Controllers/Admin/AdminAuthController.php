@@ -84,6 +84,9 @@ class AdminAuthController extends Controller
         // }
        
     }
+    public function getRegister(){
+        return view('admin.register');
+    }
  
     public function adminLogout(Request $request)
     {

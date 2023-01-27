@@ -37,7 +37,7 @@
                           </thead>
                           <tbody>
                             @foreach ($pesan as $psn)
-                            <li>
+                           
                                 <tr>
                                     <td>{{$psn->user_id}}</td>
                                     <td>{{$psn->nama}}</td>
@@ -45,7 +45,7 @@
                                     <td><a href="{{route('admin.pesan.hapus',['id'=>$psn->id])}}">Hapus</a>
                                     </td>
                                   </tr>
-                            </li>
+                            
                             @endforeach
                           </tbody>
                         </table>

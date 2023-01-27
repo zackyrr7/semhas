@@ -113,6 +113,11 @@
             </div>
 
             <!-- Remember Me -->
+            <div>
+                <td><a href="{{route('adminRegister')}}" style="color:blue">Register</a></td>
+            </div>
+            
+            
            
 
             <div class="flex items-center justify-end mt-4">

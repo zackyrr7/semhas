@@ -30,7 +30,7 @@
                           </thead>
                           <tbody>
                             @foreach ($user as $usr)
-                            <li>
+                            
                                 <tr>
                                     <td>{{$usr->id}}</td>
                                     <td>{{$usr->name}}</td>
@@ -40,7 +40,7 @@
                                     <td><a href="{{route('admin.user.hapus',['id'=>$usr->id])}}">Hapus</a>
                                     </td>
                                   </tr>
-                            </li>
+                            
                             @endforeach
                           </tbody>
                         </table>

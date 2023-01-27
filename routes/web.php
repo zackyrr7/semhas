@@ -25,7 +25,7 @@ use App\Http\Controllers\Admin\AdminAuthController;
 */
 
 Route::get('/', function () {
-    return view('admin.Login');
+    return view('index');
 });
 
 Route::get('/dashboard', function () {
@@ -51,6 +51,8 @@ require __DIR__.'/auth.php';
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
     Route::get('/login', [AdminAuthController::class, 'getLogin'])->name('adminLogin');
     Route::post('/login', [AdminAuthController::class, 'postLogin'])->name('adminLoginPost');
+    Route::get('/register', [AdminAuthController::class, 'getRegister'])->name('adminRegister');
+    Route::post('/register', [AdminAuthController::class, 'postLogin'])->name('adminRegisterPost');
     Route::post('/logout', [AdminAuthController::class, 'adminLogout'])->name('adminLogout');
  
     Route::group(['middleware' => 'adminauth'], function () {

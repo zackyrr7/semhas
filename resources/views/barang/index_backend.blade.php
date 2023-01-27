@@ -28,7 +28,7 @@
                               </thead>
                               <tbody>
                                 @foreach ($barang as $brg)
-                                <li>
+                                
                                     <tr>
                                         <td>{{$brg->id}}</td>
                                         <td>{{$brg->nama}}</td>
@@ -38,7 +38,7 @@
                                         <td><a href="{{route('admin.barang.hapus',['id'=>$brg->id])}}">Hapus</a>
                                         </td>
                                       </tr>
-                                </li>
+                                
                                 @endforeach
                               </tbody>
                             </table>

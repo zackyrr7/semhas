@@ -32,7 +32,7 @@
                           </thead>
                           <tbody>
                             @foreach ($pertanyaan as $prt)
-                            <li>
+                            
                                 <tr>
                                     <td>{{$prt->id}}</td>
                                     <td>{{$prt->judul}}</td>
@@ -42,7 +42,7 @@
                                     <td><a href="{{route('admin.pertanyaan.hapus',['id'=>$prt->id])}}">Hapus</a>
                                     </td>
                                   </tr>
-                            </li>
+                            
                             @endforeach
                           </tbody>
                         </table>

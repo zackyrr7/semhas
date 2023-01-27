@@ -20,14 +20,14 @@
                         <table class="table table-striped table-sm">
                           <thead>
                             <tr>
-                              <th scope="col">ID Barang</th>
+                              <th scope="col">ID User</th>
                               <th scope="col">Nama</th>
                               <th scope="col">Tabungan</th>
                             </tr>
                           </thead>
                           <tbody>
                             @foreach ($user as $usr)
-                            <li>
+                            
                                 <tr>
                                     <td>{{$usr->id}}</td>
                                     <td>{{$usr->name}}</td>
@@ -35,7 +35,7 @@
                                     </td>
                                     
                                   </tr>
-                            </li>
+                            
                             @endforeach
                           </tbody>
                         </table>

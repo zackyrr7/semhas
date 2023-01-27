@@ -13,6 +13,7 @@ use App\Http\Controllers\CuciController;
 use App\Http\Controllers\LampuController;
 use App\Http\Controllers\PdamController;
 use App\Http\Controllers\WalletController;
+use App\Http\Controllers\UserController;
 
 
 /*
@@ -91,6 +92,8 @@ Route::group(['middleware' => 'auth:api'], function ($router) {
 });
 Route::post('/tabungan/store', [TabunganController::class, 'store']);
 Route::get('/tabungan/show', [TabunganController::class, 'index']);
+
+Route::get('/user', [UserController::class, 'user']);
 
 
 Route::controller(AuthController::class)->group(function () {
